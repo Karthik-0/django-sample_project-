@@ -1,0 +1,27 @@
+<!-- {% load app_filters %}   -->
+
+
+<!-- {% if entry.id|modulo:3 %}
+    <div class="row"> -->
+<!-- {% endif %} -->
+<div class="col-md-4 col-sm-6 my-auto">
+<div class="card mx-auto  card-block d-flex bg-info text-white my-5" style="height: 250px;">
+    <div class="card-header">
+
+            <h2 class="text-center">{{ entry.name }}</h2>
+    </div>   
+    <div class="card-body justify-content-center align-items-center d-flex  my-auto">
+  
+          <h4 class="text-center text-white"> {{ entry.date | date:"d M Y" }}</h4>
+          <!-- <p class="mt-4 py-4 px-2 text-center bg-secondary text-white">{{ entry.description }}</p> -->
+         
+        </div>
+        <div class="card-footer text-center">
+                <button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn btn- btn-secondary">View Details</button>
+
+                <button onclick="deleteCalendarEntry(this)" data-id="{{entry.id}}" class="btn btn- btn-danger">Delete</button>            </div>
+</div>
+</div>
+<!-- {% if entry.id|modulo:3 %}
+</div>
+{% endif %} -->
