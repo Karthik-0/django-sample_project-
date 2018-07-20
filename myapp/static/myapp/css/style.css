@@ -2,3 +2,16 @@
     list-style: none;
     padding-left: 0;
 }
+.page-center {
+
+    /* background-color: red; */
+    text-align: center;
+    position: absolute;
+    top:50%;
+  left:50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
+    margin: auto;
+  }

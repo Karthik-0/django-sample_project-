@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center text-primary">
+        Sign Up
+    </h2>
+        <form method="POST">
+                {% csrf_token %}
+                    {% for field in form %}
+                        
+                        <div class="form-group">
+                                <label>{{field.label}}</label>
+                                <input type="{%if 'password' in field.name %}password{%else%}input{%endif%}" name={{ field.name }} class="form-control">
+                              </div>
+                              <div class="text-danger"> {{field.errors}}</div>
+                    {% endfor %}
+            <button class="btn btn-primary" type="submit">Signup</button><br/><br/>
+            <a href="/login">Already registered ?  Click here</a>
+            </form>
+</div>
+{% endblock %}

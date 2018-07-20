@@ -10,8 +10,8 @@ function deleteCalendarEntry(entry){
         beforeSend: function(xhr){
             xhr.setRequestHeader('X-CSRFToken',csrf_token)
         }
-        // data:{
-        //     "csrfmiddlewaretoken":csrf_token    
-        // }
-    })
+        
+    }).done(function( msg ) {
+        console.log( "Data Saved: " + msg );
+      });
 }

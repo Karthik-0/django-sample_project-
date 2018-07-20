@@ -2,18 +2,11 @@
 
 {% block content %}
 
+<div class="page-center">
+    <h1>Calendar</h1>
+    <p>Keep track of your events</p>
+    <button class="btn btn-primary" onclick="window.location='login'">Login</button>
 
-
-<div class="">
-    <div class="container">
-            <div class="row">
-            
-                {% for entry in entries %}
-                   {% include 'myapp/_calendar_entry.html' %}
-                {% endfor %}
-            </div>
-        
-    </div>
 </div>
 
 {% endblock %}
